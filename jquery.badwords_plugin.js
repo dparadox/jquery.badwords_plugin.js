@@ -28,10 +28,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     $.fn.extend({
         badwords:function(msg, arr){
             return this.each(function(){
-               var words_arr;
+               var list_array;
 
                 if (typeof arr === 'undefined'){
-                words_arr =new Array(
+                list_array =new Array(
                     'caca',
                     'mierd',
                     'mamad',
@@ -64,6 +64,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                     'sesenta y nueve',
                     'en cuatro',
                     'en 4',
+                    '4 patas',
                     'adefesio',
                     'balurde',
                     'boludo',
@@ -72,6 +73,14 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                     'cabron',
                     'cachimba',
                     'caga',
+                    'cagon',
+                    'cagón',
+                    'pedófilo',
+                    'pedofilo',
+                    'prosti',
+                    'puto',
+                    'caga',
+                    'pedorro',
                     'cerot',
                     'ching',
                     'chucha',
@@ -108,6 +117,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                     'papallon',
                     'papayona',
                     'pelotud',
+                    'pedorr',
                     'pendej',
                     'pija',
                     'pinche',
@@ -122,8 +132,28 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                     'verg',
                     'paja',
                     'paji',
+                    'p3n3',
+                    'pene',
+                    'vajina',
+                    'ano',
+                    'an0',
+                    '4no',
+                    '4n0',
+                    'escroto',
+                    'p3n3',
+                    'p3n3',
+                    'pen3',
+                    'p3ne',
                     'zorr',
                     'sorra',
+                    'spoll',
+                    'sposhit',
+                    'espolleto',
+                    'espolleto',
+                    'sspoleto',
+                    'spocaca',
+                    'spoput',
+                    'espoput',
                     'skullfuck', 
                     'cunt', 
                     'cum dumpster', 
@@ -225,18 +255,18 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                     'beat the kids', 
                     'choade');
                 }else{
-                    words_arr = arr;
+                    list_array = arr;
                 }
                 if( Object.prototype.toString.call( msg ) === '[object Array]' ) {
-                    words_arr = msg;
+                    list_array = msg;
                 }
-                    var regex = new RegExp('\\b(' + words_arr.join('|') + ')\\b', 'i' );
+                    var regex = new RegExp('\\b('+list_array.join('|')+')\\b','i');
 
 
                     $(this).keyup(function(e){
-                        var text = $(this).val();
-                        text = text.toLowerCase();
-                        if(regex.test(text)) {
+                        var txt_match = $(this).val();
+                        txt_match = txt_match.toLowerCase();
+                        if(regex.test(txt_match)) {
                            $(this).val('');
                            if (typeof msg !== 'undefined' ){
                              if(msg.length  > 0 && Object.prototype.toString.call( msg ) !== '[object Array]' ){
@@ -251,7 +281,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         }
     });
     
-})(jQuery);
+})(jQuery)
 
 
 

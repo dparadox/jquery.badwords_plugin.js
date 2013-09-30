@@ -14,17 +14,18 @@ Include after Jquery library JS
 
 Now initialize the plugin inside document ready and define the id of input type=text
 
-<input id="input_name" class="inputTextNameBox" type="text" value="">
 
-$(document).ready(function(){
-    $('#input_name').badwords();
-});
+	//<input id="input_name" class="inputTextNameBox" type="text" value="">
 
-Also you can pass a message in the constructor
+	$(document).ready(function(){
+		$('#input_name').badwords();
+	});
+
+You can pass a message in the constructor
 
 	$('#input_name').badwords('Dont use bad words please.');
  
-You can add you custom word validation passing the array in the constructor.
+Also You can add you custom word validation passing the array in the constructor.
 
 	var cust =new Array('mamita', 'papita');
 	$('#platillo_nombre_platillo').badwords(cust);
@@ -33,3 +34,4 @@ You can add you custom word validation passing the array in the constructor.
 
 
 
+ v 1.1 New variations words added 
