@@ -576,7 +576,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 					'verga',
 					'vergu',
 					'vibrator',
-					'violet blue',
 					'violet wand',
 					'vorarephilia',
 					'voyeur',
